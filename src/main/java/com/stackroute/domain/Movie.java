@@ -1,18 +1,23 @@
 package com.stackroute.domain;
 
 public class Movie {
-    Actor actor;
-    private String movieName;
 
-    public void setMovieName(String movieName) {
+    String movieName;
+
+    Actor actorName;
+
+    public Movie(String movieName, Actor actorName) {
+
         this.movieName = movieName;
+
+        this.actorName = actorName;
+
     }
 
+    public void displayMovieInfo(){
 
-    public void setActor(Actor actor) {
-        this.actor = actor;
+        System.out.println("Movie Name is :"+ movieName+ " actor name is:" + actorName);
+
     }
-    public void displayMovieinfo(){
-        System.out.println("Movie Name is:"+ movieName+ "Actor name is: "+ actor.getName());
-    }
+
 }
